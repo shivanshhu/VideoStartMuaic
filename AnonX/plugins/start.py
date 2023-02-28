@@ -1,5 +1,6 @@
 import asyncio
 import time
+import random
 
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
@@ -29,6 +30,13 @@ from AnonX.utils.inline import (help_pannel, private_panel,
 
 loop = asyncio.get_running_loop()
 
+PH_ON_P = "https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4"
+PH_ON_P = "https://te.legra.ph/file/628c3922ea93564f0488d.mp4"
+PH_ON_P = "https://te.legra.ph/file/ddf7df28f009f3ffb672d.mp4"
+PH_ON_P = "https://te.legra.ph/file/f49f15a453c1648dce294.mp4"
+PH_ON_P ="https://te.legra.ph/file/25c72cc414d01a677a598.mp4"
+PH_ON_P = "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"
+
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
@@ -43,7 +51,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_sticker("CAACAgUAAxkBAAJE8GK4EsoLVZC2SW5W5Q-QAkaoN8f_AAL9BQACiy14VGoQxOCDfE1KKQQ")
+            await message.reply_video(random.choice(PH_ON_P))
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
