@@ -30,12 +30,12 @@ from AnonX.utils.inline import (help_pannel, private_panel,
 
 loop = asyncio.get_running_loop()
 
-PH_ON_P =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
+PH_ON_P =random.choice(["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/628c3922ea93564f0488d.mp4",
 "https://te.legra.ph/file/ddf7df28f009f3ffb672d.mp4",
 "https://te.legra.ph/file/f49f15a453c1648dce294.mp4",
 "https://te.legra.ph/file/25c72cc414d01a677a598.mp4",
-"https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
+"https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"])
 
 
 @app.on_message(
@@ -51,10 +51,10 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_video(random.choice(
+            await message.reply_video(
                        video=PH_ON_P,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
-            ))
+            )
         if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
@@ -209,11 +209,11 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_video(random.choice(
+                await message.reply_video(
                     video=PH_ON_P,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
-                    )),
+                    ),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
