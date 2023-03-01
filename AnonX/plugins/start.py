@@ -37,7 +37,7 @@ PH_ON_P =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/25c72cc414d01a677a598.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
-OMFOO = random.choice(PH_ON_P)
+OMFOO = random.random(PH_ON_P)
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
