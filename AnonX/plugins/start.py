@@ -52,8 +52,8 @@ async def start_comm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             await message.reply_video(random.choice(PH_ON_P))
-            return await message.reply_photo(
-                       photo=config.START_IMG_URL,
+            return await message.reply_video(
+                       photo=config.PH_ON_P,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
         if name[0:4] == "song":
@@ -211,8 +211,8 @@ async def start_comm(client, message: Message, _):
         if config.START_IMG_URL:
             try:
                 await message.reply_video(random.choice(PH_ON_P))
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
+                await message.reply_video(
+                    photo=config.PH_ON_P,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
