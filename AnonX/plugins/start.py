@@ -37,7 +37,15 @@ PH_ON =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/25c72cc414d01a677a598.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
+OLELE = ["https://te.legra.ph/file/a27fa2f4f4fff2a94c609.jpg",
+"https://te.legra.ph/file/1e9b6f8d081d34257c2c3.jpg",
+"https://te.legra.ph/file/8ce128bbec1a0fa0d009d.jpg",
+"https://te.legra.ph/file/94618620174f39741776a.jpg",
+"https://te.legra.ph/file/5a02427e5e8ce7d51e7c1.jpg"
+]
+
 OMFOO = random.choice(PH_ON)
+ARE_VAII = random.choice(OLELE)
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
@@ -53,7 +61,7 @@ async def start_comm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=OMFOO,
+                       video=ARE_VAII,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
         if name[0:4] == "song":
@@ -208,10 +216,10 @@ async def start_comm(client, message: Message, _):
         except:
             OWNER = None
         out = private_panel(_, app.username, OWNER)
-        if OMFOO:
+        if ARE_VAII:
             try:
                 await message.reply_video(
-                    video=OMFOO,
+                    video=ARE_VAII,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
@@ -247,7 +255,7 @@ async def testbot(client, message: Message, _):
     OWNER = OWNER_ID[0]
     out = start_pannel(_, app.username, OWNER)
     return await message.reply_video(
-               video=OMFOO,
+               video=ARE_VAII,
                caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
