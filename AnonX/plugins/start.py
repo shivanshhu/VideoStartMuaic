@@ -60,8 +60,8 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_video(
-                       video=ARE_VAII,
+            await message.reply_photo(
+                       photo=f"{ARE_VAII}",
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             await message.reply_video(
