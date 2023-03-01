@@ -208,7 +208,7 @@ async def start_comm(client, message: Message, _):
         except:
             OWNER = None
         out = private_panel(_, app.username, OWNER)
-        if config.START_IMG_URL:
+        if OMFOO:
             try:
                 await message.reply_video(
                     video=OMFOO,
@@ -246,8 +246,8 @@ async def start_comm(client, message: Message, _):
 async def testbot(client, message: Message, _):
     OWNER = OWNER_ID[0]
     out = start_pannel(_, app.username, OWNER)
-    return await message.reply_photo(
-               photo=config.START_IMG_URL,
+    return await message.reply_video(
+               video=OMFOO,
                caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
