@@ -213,10 +213,10 @@ async def start_comm(client, message: Message, _):
         except:
             OWNER = None
         out = private_panel(_, app.username, OWNER)
-        if ARE_VAII:
+        if OMFOO:
             try:
                 await message.reply_video(
-                    video=ARE_VAII,
+                    video=OMFOO,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
@@ -252,7 +252,7 @@ async def testbot(client, message: Message, _):
     OWNER = OWNER_ID[0]
     out = start_pannel(_, app.username, OWNER)
     return await message.reply_video(
-               video=ARE_VAII,
+               video=OMFOO,
                caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
