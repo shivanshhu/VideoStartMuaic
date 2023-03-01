@@ -51,9 +51,8 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_sticker(CAACAgUAAxkBAAIrm2P_Z-fcW3XyddR9D8PSUdJwCIcLAAIICwAC-_mBVlat8u5LQIfrLgQ)
-            return await message.reply_video(
-                       video=config.PH_ON_P,
+            await message.reply_video(
+                       video=PH_ON_P,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
         if name[0:4] == "song":
@@ -210,9 +209,8 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_sticker(CAACAgUAAxkBAAIrm2P_Z-fcW3XyddR9D8PSUdJwCIcLAAIICwAC-_mBVlat8u5LQIfrLgQ)
                 await message.reply_video(
-                    video=config.PH_ON_P,
+                    video=PH_ON_P,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
