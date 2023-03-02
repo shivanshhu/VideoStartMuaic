@@ -37,6 +37,7 @@ PH_ON =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/25c72cc414d01a677a598.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
+OMFOO = random.choice(PH_ON)
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
@@ -50,7 +51,7 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            OMFOO = random.choice(PH_ON)
+            
             keyboard = help_pannel(_)
             await message.reply_video(
                        video=OMFOO,
