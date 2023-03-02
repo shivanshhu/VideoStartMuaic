@@ -51,17 +51,13 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            AVENGERS=OMFOO
+            
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=AVENGERS,
+                       video=random.choice(PH_ON),
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             
-            await message.reply_video(
-                       video=OMFOO,
-                       caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
-            )
         if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
