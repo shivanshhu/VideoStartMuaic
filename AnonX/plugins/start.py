@@ -250,7 +250,7 @@ async def testbot(client, message: Message, _):
     OWNER = OWNER_ID[0]
     out = start_pannel(_, app.username, OWNER)
     return await message.reply_photo(
-               photo=START_IMG_URL,
+               photo=config.START_IMG_URL,
                caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
