@@ -30,7 +30,7 @@ from AnonX.utils.inline import (help_pannel, private_panel,
 
 loop = asyncio.get_running_loop()
 
-PH_ON = ["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
+PH_ON =random.choice["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/628c3922ea93564f0488d.mp4",
 "https://te.legra.ph/file/ddf7df28f009f3ffb672d.mp4",
 "https://te.legra.ph/file/f49f15a453c1648dce294.mp4",
