@@ -51,10 +51,10 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            
+            AVENGERS=OMFOO
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=OMFOO,
+                       video=AVENGERS,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             
@@ -217,7 +217,7 @@ async def start_comm(client, message: Message, _):
         if config.START_IMG_URL:
             try:
                 await message.reply_video(
-                    video=OMFOO,
+                    video=AVENGERS,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
@@ -253,7 +253,7 @@ async def testbot(client, message: Message, _):
     OWNER = OWNER_ID[0]
     out = start_pannel(_, app.username, OWNER)
     return await message.reply_video(
-               video=OMFOO,
+               video=AVENGERS,
                caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
