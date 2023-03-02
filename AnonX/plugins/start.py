@@ -54,7 +54,7 @@ async def start_comm(client, message: Message, _):
             
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=random.choice(PH_ON),
+                       video=PH_ON,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             
