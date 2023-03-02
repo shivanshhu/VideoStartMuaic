@@ -53,7 +53,7 @@ async def start_comm(client, message: Message, _):
             OMFOO = random.choice(PH_ON)
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=f"{OMFOO}",
+                       video=OMFOO,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             
