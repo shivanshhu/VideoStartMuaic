@@ -213,7 +213,7 @@ async def start_comm(client, message: Message, _):
         except:
             OWNER = None
         out = private_panel(_, app.username, OWNER)
-        if START_IMG_URL:
+        if config.START_IMG_URL:
             try:
                 await message.reply_video(
                     video=OMFOO,
