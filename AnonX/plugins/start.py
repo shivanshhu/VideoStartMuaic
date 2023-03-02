@@ -38,7 +38,6 @@ PH_ON = ["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
 
-OMFOO = random.choices(PH_ON, k=1)
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
@@ -48,6 +47,7 @@ OMFOO = random.choices(PH_ON, k=1)
 )
 @LanguageStart
 async def start_comm(client, message: Message, _):
+    OMFOO = random.choice(PH_ON)
     await add_served_user(message.from_user.id)
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
