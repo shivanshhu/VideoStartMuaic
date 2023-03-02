@@ -38,7 +38,7 @@ PH_ON =random.choice(["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 )
 
-OMFOO = random.choice(PH_ON)
+OMFOO = random.choices(PH_ON, k=1)
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
@@ -55,7 +55,7 @@ async def start_comm(client, message: Message, _):
             
             keyboard = help_pannel(_)
             await message.reply_video(
-                       video=PH_ON,
+                       video=OMFOO,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
             
