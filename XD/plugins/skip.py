@@ -4,16 +4,16 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from AnonX import YouTube, app
-from AnonX.core.call import Anon
-from AnonX.misc import db
-from AnonX.utils.database import get_loop
-from AnonX.utils.decorators import AdminRightsCheck
-from AnonX.utils.inline.play import (stream_markup,
+from XD import YouTube, app
+from XD.core.call import Anon
+from XD.misc import db
+from XD.utils.database import get_loop
+from XD.utils.decorators import AdminRightsCheck
+from XD.utils.inline.play import (stream_markup,
                                           telegram_markup,
                                           close_keyboard)
-from AnonX.utils.stream.autoclear import auto_clean
-from AnonX.utils.thumbnails import gen_thumb
+from XD.utils.stream.autoclear import auto_clean
+from XD.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")

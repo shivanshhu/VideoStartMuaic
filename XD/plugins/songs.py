@@ -11,10 +11,10 @@ from pyrogram.types import (InlineKeyboardButton,
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
 from strings import get_command
-from AnonX import YouTube, app
-from AnonX.utils.decorators.language import language, languageCB
-from AnonX.utils.formatters import convert_bytes
-from AnonX.utils.inline.song import song_markup
+from XD import YouTube, app
+from XD.utils.decorators.language import language, languageCB
+from XD.utils.formatters import convert_bytes
+from XD.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")

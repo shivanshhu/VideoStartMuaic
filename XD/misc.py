@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from AnonX.core.mongo import pymongodb
+from XD.core.mongo import pymongodb
 
 from .logging import LOGGER
 

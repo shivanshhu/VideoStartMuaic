@@ -3,11 +3,11 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from AnonX import app
-from AnonX.core.call import Anon
-from AnonX.utils.database import set_loop
-from AnonX.utils.decorators import AdminRightsCheck
-from AnonX.utils.inline.play import close_keyboard
+from XD import app
+from XD.core.call import Anon
+from XD.utils.database import set_loop
+from XD.utils.decorators import AdminRightsCheck
+from XD.utils.inline.play import close_keyboard
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")

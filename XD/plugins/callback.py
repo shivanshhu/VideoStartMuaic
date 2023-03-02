@@ -10,11 +10,11 @@ from config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
                     SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
                     TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL,
                     MUSIC_BOT_NAME, adminlist)
-from AnonX import YouTube, app
-from AnonX.core.call import Anon
-from AnonX.misc import SUDOERS, db
-from AnonX.utils import bot_sys_stats
-from AnonX.utils.database import (
+from XD import YouTube, app
+from XD.core.call import Anon
+from XD.misc import SUDOERS, db
+from XD.utils import bot_sys_stats
+from XD.utils.database import (
     get_active_chats,
     get_lang,
     is_active_chat,
@@ -24,17 +24,17 @@ from AnonX.utils.database import (
     music_on,
     set_loop,
 )
-from AnonX.utils.decorators.language import languageCB
-from AnonX.utils.formatters import seconds_to_min
-from AnonX.utils.inline import (
+from XD.utils.decorators.language import languageCB
+from XD.utils.formatters import seconds_to_min
+from XD.utils.inline import (
     stream_markup,
     stream_markup_timer,
     telegram_markup,
     telegram_markup_timer,
     close_keyboard,
 )
-from AnonX.utils.stream.autoclear import auto_clean
-from AnonX.utils.thumbnails import gen_thumb
+from XD.utils.stream.autoclear import auto_clean
+from XD.utils.thumbnails import gen_thumb
 
 wrong = {}
 checker = {}

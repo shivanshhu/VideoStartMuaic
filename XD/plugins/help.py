@@ -7,13 +7,13 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
-from AnonX import app
-from AnonX.misc import SUDOERS
-from AnonX.utils import help_pannel
-from AnonX.utils.database import get_lang, is_commanddelete_on
-from AnonX.utils.decorators.language import (LanguageStart,
+from XD import app
+from XD.misc import SUDOERS
+from XD.utils import help_pannel
+from XD.utils.database import get_lang, is_commanddelete_on
+from XD.utils.decorators.language import (LanguageStart,
                                                   languageCB)
-from AnonX.utils.inline.help import (help_back_markup,
+from XD.utils.inline.help import (help_back_markup,
                                           private_help_panel)
 PH_ON_P =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/628c3922ea93564f0488d.mp4",

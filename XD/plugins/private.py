@@ -3,13 +3,13 @@ from pyrogram.types import Message
 
 import config
 from strings import get_command
-from AnonX import app
-from AnonX.misc import SUDOERS
-from AnonX.utils.database import (add_private_chat,
+from XD import app
+from XD.misc import SUDOERS
+from XD.utils.database import (add_private_chat,
                                        get_private_served_chats,
                                        is_served_private_chat,
                                        remove_private_chat)
-from AnonX.utils.decorators.language import language
+from XD.utils.decorators.language import language
 
 AUTHORIZE_COMMAND = get_command("AUTHORIZE_COMMAND")
 UNAUTHORIZE_COMMAND = get_command("UNAUTHORIZE_COMMAND")
