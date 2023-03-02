@@ -1,6 +1,6 @@
 import asyncio
 import time
-import random
+import random 
 
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
@@ -38,7 +38,6 @@ PH_ON = ["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
 "https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
 
-
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.private
@@ -51,13 +50,12 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            
             keyboard = help_pannel(_)
-            await message.reply_photo(
+            await message.reply_sticker("CAACAgUAAxkBAAJE8GK4EsoLVZC2SW5W5Q-QAkaoN8f_AAL9BQACiy14VGoQxOCDfE1KKQQ")
+            return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
-            
         if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
@@ -212,8 +210,9 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_video(
-                    video=AVENGERS,
+                await message.reply_sticker("CAACAgUAAxkBAAIjTGKPYCq3keRZgNbshxtJ5k7H609OAAIZBgACYAF5VIerYoMcSln8JAQ")
+                await message.reply_photo(
+                    photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
                         config.MUSIC_BOT_NAME
                     ),
