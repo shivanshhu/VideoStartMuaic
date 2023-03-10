@@ -30,13 +30,14 @@ from XD.utils.inline import (help_pannel, private_panel,
 
 loop = asyncio.get_running_loop()
 
-PH_ON = ["https://te.legra.ph/file/36f97b01a5f3590c87feb.jpg",
-"https://te.legra.ph/file/ddd5ca37eb2b7b9438b62.jpg",
-"https://te.legra.ph/file/613b10dc65dc10d4d6732.jpg",
-"https://te.legra.ph/file/b82cbb187e651a6834995.jpg",
-"https://te.legra.ph/file/0bcfabfbc6dbaa1871964.jpg",
-"https://te.legra.ph/file/b1a6496a007f586fed608.jpg",
-"https://te.legra.ph/file/5a3ef7e627f7c7b93f263.jpg"]
+PH_ON = ["https://te.legra.ph/file/4c43c4f060ff587224fbf.mp4",
+"https://te.legra.ph/file/ddce31f042d71bde06dd1.mp4",
+"https://te.legra.ph/file/9b2de8a6bb5d96f431623.mp4",
+"https://te.legra.ph/file/f21c1f1dd3f27539c1873.mp4",
+"https://te.legra.ph/file/6a320df34dfad83e670d3.mp4",
+"https://te.legra.ph/file/ce819984a7204c2829636.mp4",
+"https://te.legra.ph/file/865e0e20a13ba66224f4f.mp4",
+"https://te.legra.ph/file/a94227717b2f75e4db076.mp4"]
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
