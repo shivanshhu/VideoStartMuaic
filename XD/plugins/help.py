@@ -14,7 +14,8 @@ from XD.utils.database import get_lang, is_commanddelete_on
 from XD.utils.decorators.language import (LanguageStart,
                                                   languageCB)
 from XD.utils.inline.help import (help_back_markup,
-                                          private_help_panel)
+                        
+PH_ON_P =[""]                  private_help_panel)
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
