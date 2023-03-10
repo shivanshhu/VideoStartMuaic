@@ -15,12 +15,6 @@ from XD.utils.decorators.language import (LanguageStart,
                                                   languageCB)
 from XD.utils.inline.help import (help_back_markup,
                                           private_help_panel)
-PH_ON_P =["https://te.legra.ph/file/232b2fecef3b32fc9fa3a.mp4",
-"https://te.legra.ph/file/628c3922ea93564f0488d.mp4",
-"https://te.legra.ph/file/ddf7df28f009f3ffb672d.mp4",
-"https://te.legra.ph/file/f49f15a453c1648dce294.mp4",
-"https://te.legra.ph/file/25c72cc414d01a677a598.mp4",
-"https://te.legra.ph/file/c0bc0efb5e3481734378b.mp4"]
 
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
